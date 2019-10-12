@@ -1,0 +1,12 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string s = "123har";
+    if(s[2]>='1' && s[2]<='9')
+	cout<<"integer\n";
+    else
+	cout<<"char\n";
+    return 0;
+}

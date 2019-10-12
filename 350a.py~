@@ -1,0 +1,19 @@
+n = int(input())
+if n>=7:
+    tot = n//7
+else:
+    tot = n//6
+
+ext = n % 7
+
+ans = tot*2
+
+if(ext>1):
+    print(ans,ans+2)
+elif(ext == 1):
+    print(ans,ans+1)
+else:
+    print(ans,ans)
+
+
+    

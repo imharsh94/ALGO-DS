@@ -1,0 +1,12 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    map< char,int > pri;
+    pri['+'] = 1; pri['-']=2; pri['*']=3; pri['/']=4; pri['^'] = 5;
+    stack
+    
+    cout<<a['+']<<endl;
+    return 0;
+}

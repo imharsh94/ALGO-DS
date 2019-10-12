@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int root(int arr[], int i)
+{
+    while(arr[i] != i)
+	i = arr[i];
+    return i;
+}
+
+int union(int arr[],int a,int b)
+{
+    int roota = root(arr,a);
+    int rootb = root(arr,b);
+    arr[roota] = rootb;
+}
+
+void initialize(int arr[], int n)
+{
+    for(int i=0; i<n; i++)
+    {
+	arr[i] = i;
+	
+    }
+}
+
+int main()
+{
+    int n, cin>>n;
+    int arr[n];
+    initialize();
+    
+    return 0;
+}

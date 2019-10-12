@@ -1,0 +1,61 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+struct node
+{
+    int sum,prefixsum,suffixsum,maxsum;
+};
+
+int arr[50010];
+node  tree[200040];
+
+void build(int index,int s,int e)
+{
+    if(s==e)
+    {
+	tree[index].sum=arr[s];
+	tree[index].prefixsum = arr[s];
+	tree[index].suffixsum = arr[s];
+	tree[index].maxsum = arr[s];
+    }
+    else
+    {
+	int mid = (s+e)/2;
+	build(2*index+1,s,mid);
+	build(2*index+2,mid+1,e);
+
+	tree[index].sum = tree[2*index+1].sum + tree[2*index+2].sum;
+	tree[index].prefixsum = max(tree[2*index+1].prefixsum,
+				    tree[2*index+2].prefixsum+tree[2*index+1].sum);
+	tree[index].suffixsum = max(tree[2*index+2].suffixsum,
+				    tree[2*index+2].sum+ tree[2*index+1].suffixsum);
+	tree[index].maxsum = max(max(tree[2*index+1].maxsum,tree[2*index+2].maxsum),
+				 tree[2*index+1].suffixsum + tree[2*index+2].prefixsum);
+    }
+}
+
+node query(int index,int s,int e,int l,int r)
+{
+    node result;
+    
+}
+
+
+int main()
+{
+    int n,m,a,b; cin>>n;
+
+    for(int i=0; i<n; i++)
+	cin>>arr[i];
+
+    build(0,0,n-1);
+
+    cin>>m;
+    while(q--)
+    {
+	cin>>l>>r;
+	cout<<query(0,0,n-1,a-1,b-1)<<'\n';
+    }
+    
+    return 0;
+}

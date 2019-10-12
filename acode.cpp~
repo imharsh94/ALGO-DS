@@ -1,0 +1,10 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    char c[5]={'h','a','r','s','h'};
+    printf("%s",c);
+    
+    return 0;
+}

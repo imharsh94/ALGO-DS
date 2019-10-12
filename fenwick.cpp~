@@ -1,0 +1,22 @@
+#include<bits/stdc++.h.
+using namespace std;
+
+void update(int x,int val)
+{
+    for(;x<=n; x+=x&-x)
+	Bit[x] += value;
+}
+
+int Bit[1000],a[1000];
+
+int main()
+{
+    int n;
+    cin>>n;
+    for(int i=1;i<=n;i++)
+    {
+	cin>>a[i];
+	update(i,a[i]);
+    }
+    return 0;
+}

@@ -1,0 +1,5 @@
+a = 13
+b= 23
+print("thod  isnb")
+if 5>1:
+    s= a+b

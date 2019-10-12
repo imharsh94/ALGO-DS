@@ -1,0 +1,11 @@
+*** Monday
+**** work
+     SCHEDULED: <2018-04-23 Mon>
+**** DONE play
+     SCHEDULED: <2018-04-15 Sun>
+*** Tuesday
+**** project
+*** Wednesday
+*** Thursday
+*** Friday
+*** Saturday

@@ -1,0 +1,11 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n = 8;
+    bitset< 6 > b1(32);
+    cout<<b1.count()<<endl;
+    cout<<b1.size()<<'\n';
+    return 0;
+}

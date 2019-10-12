@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+int primes[10000];
+
+void primes()
+{
+    for(int i=2; i<=10000; i++)
+    {
+	if(prime[i] == 1)
+	    for(int j= i*i; j<=n; j += i)
+		primes[j]=0;
+	    
+    }
+}
+
+
+int main()
+{
+    int t; cin>>t;
+    fill_n(primes+2,10000,1);
+    while(t--)
+    {
+	int n; cin>>n;
+	int ans=n;
+	for(int i=2; i*i<=n; i++)
+	    if(primes[i] && n%(primes[i])==0)
+		ans = ans * (primes[i]-1)/primes[i];
+
+	cout<<ans<<'\n';
+    }
+    return 0;
+}

@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+
+const int MAX = 300001;
+ll sum[MAX];
+
+int main()
+{
+    int n,m,a,i,j;
+    cin>>n>>m;
+    ll res;
+
+    for(int i=1; i<=n; i++)
+    {
+	
+	scanf("%d",&a);
+	sum[i] = sum[i-1]+a;
+    }
+    
+    return 0;
+}
+
+

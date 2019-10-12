@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    string s;
+    char k;
+    set< char> db;
+
+    for(int i=0; i<n; i++)
+    {
+	cin>>s;
+	if(s[i] != s[n-i-1])
+	{
+	    cout<<"NO\n";
+	    return 0;
+	}
+	for(int i=0; i<n; i++)
+	    db.insert(s[i]);
+	
+    }
+
+    if(db.size != 2)
+	cout<<"NO\n";
+    else
+	cout<<"YES\n";
+    return 0;
+}

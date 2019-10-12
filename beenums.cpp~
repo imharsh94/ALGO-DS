@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+bool f(int n)
+{
+    int d = 6,sum=1,i=1;
+    while(sum<n)
+    {
+	sum = sum + d;
+	i++;
+	d = d*i;
+    }
+    if(sum == n)
+	return true;
+    else
+	return false;
+}
+
+int main()
+{
+    int n; cin>>n;
+    while(n != -1)
+    {
+	if(f(n))
+	    cout<<"Y\n";
+	else
+	    cout<<"N\n";
+    }
+    return 0;
+}

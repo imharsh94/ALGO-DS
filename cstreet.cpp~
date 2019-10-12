@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+typedef pair<ll,int> pii;
+bool marked[1009];
+vector <pii> adj[1009];
+
+int main()
+{
+    int t; cin>>t;
+    while(t--)
+    {
+	
+    }
+    return 0;
+}

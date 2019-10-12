@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+ int col;
+ string s;
+ cin>>col;
+ while(col != 0)
+ {
+  cin>>s;
+  int d=0,r,y=0,z=0;
+  r = 2*col-1;
+  for(int i=0;i<col;i++)
+  {
+ 
+   cout<<s[i];
+    while(z< s.length())
+    {
+     y = y+r;
+     z = y+d+1;
+     if(y<s.length())
+       cout<<s[y+i];
+     if(z<s.length()) 
+       cout<<s[z+i];
+     y=z;
+    }
+    d=d+2;
+    r=r-2;
+    y=0,z=0;
+  }
+  cout<<endl;
+  cin>>col;
+ }
+ return 0;
+}
+

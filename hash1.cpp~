@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main()
+{
+    int a1[] = {1,2,3,4};
+    int a2[] = {1,4};
+	
+	
+    return 0;
+}
+
+

@@ -1,0 +1,51 @@
+#include<bits/stdc++.h>
+using namespace std;
+vector< int > v[4];
+bool vis[4];
+
+void dfs(int n)
+{
+    stack< int > st;
+    st.push(n);
+    // vis[n] = true;
+
+    while(!st.empty())
+    {
+	int t = st.top();
+	st.pop();
+
+//	cout<<t<<" ";
+	if(!vis[t])
+	{
+	    cout<<t<<" ";
+	    vis[t] = true;
+	for(int i=0; i<v[t].size();i++)
+	{
+	    
+	    // if(!vis[v[t][i]])
+	    //  {
+	    	st.push(v[t][i]);
+		//	vis[v[t][i]] = true;
+	    // }
+	}
+	}
+    }
+}
+
+
+
+int main()
+{
+    int nodes,edges,x,y;
+    cin>>nodes>>edges;
+    
+    for(int i=0; i<edges; i++)
+    {
+	cin>>x>>y;
+	v[x].push_back(y);
+	v[y].push_back(x);
+    }
+
+    dfs(2);
+    return 0;
+}

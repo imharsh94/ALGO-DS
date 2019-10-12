@@ -1,0 +1,59 @@
+#include<bits/stdc++.h>
+using namespace std;
+int arr[100010],bs[100010],n,u,q;
+
+void update(int x,int val)
+{
+    while(x<=n)
+    {
+	bs[x] += val;
+	x += x&-x;
+    }
+}
+
+int read(int k)
+{
+    int sum=0;
+    while(k>0)
+    {
+	sum += bs[k];
+	k -= k & -k;
+    }
+    return sum;
+}
+
+
+int main()
+{
+
+    int t; cin>>t;
+    while(t--)
+    {
+	scanf("%d%d",&n,&u);
+
+
+	for(int i=1; i<=n; i++)
+	{
+	    scanf("%d",&arr[i]);
+	    update(i, arr[i]);
+	    update(i+1,-arr[i]);
+	}
+
+	while(u--)
+	{
+	    int l,r,val;
+	    scanf("%d%d%d",&l,&r,&val);
+	    update(l,val);
+	    update (r+1,-val);
+	}
+
+	scanf("%d",&q);
+	while(q--)
+	{
+	    int x;
+	    scanf("%d",&x);
+	    cout<<read(x)<<'\n';
+	}
+    }
+    return 0;
+}

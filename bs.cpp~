@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int a[5];
+
+int b_s(int lo,int hi,int p)
+{
+    while(lo < hi)
+    {
+	int mid = lo + (hi-lo)/2;
+    }
+}
+
+int main()
+{
+    a[]={2,6,11,17,24};
+    int lo = 0,hi = n-1;
+    int ans = b_s(lo,hi,p);
+    return 0;
+}

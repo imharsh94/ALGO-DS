@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int sum=0,a,temp;
+    map< int,int > mp;
+    for(int i=0; i<5; i++)
+    {
+	cin>>a;
+	sum = sum+a;
+	mp[a]++;
+    }
+
+    temp = sum; 
+    for(auto x: mp)
+    {
+	if(mp[x] > 1)
+	    if(temp > )
+	    temp = sum-(x*mp[x]);
+    }
+    return 0;
+}
+	

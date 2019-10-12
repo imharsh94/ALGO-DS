@@ -1,0 +1,21 @@
+#include<bits/stdc++.>
+using namespace std;
+
+struct node
+{
+    int count;
+    node *left,*right;
+
+    node(int count, node *left, node *right):
+	count(count), left(left), right(right) {}
+    
+    node* insert(int l,int r,int w);
+};
+
+node *null = new node(0, NULL,NULL);
+null->left = null->right = null;
+
+
+cout<<null->count<<" "<<null->left->left->count<<'\n';
+
+

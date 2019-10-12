@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+string s,l,g;
+int len;
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+	cin>>s;
+	l=s;
+	len = s.length();
+	
+	for(i=0;i<len/2; i++)
+	    l[len-1-i] = l[i];
+
+	if(stoi(l)-stoi(s) == 0)
+	{
+	    cout<<s<<'\n';return 0;
+	}
+    }
+    return 0;
+}

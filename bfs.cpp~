@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+
+    int nodes,edges,x,y;
+    cin>>nodes>>edges;
+
+    for(int i=0; i<n; i++)
+    {
+	cin>>x>>y;
+	adj[x].push_back(y);
+	adj[y].push_back(x);
+    }
+    
+    return 0;
+}
